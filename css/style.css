@@ -1,0 +1,165 @@
+body {
+    font-family: Nunito-Regular;
+    font-size: 14px;
+    background: #fafafa;
+    background-color: #ffffff;
+}
+.e_web{
+    display: block;
+}
+.e_movil{
+    display: none;
+}
+h2{
+    font-family: Nunito-Black;
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 0;
+}
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+label{
+    margin-top: 10px;
+    margin-bottom: 3px;
+    color: #7a7a7a;
+}
+.icoLat{
+    margin-right: 10px; 
+}
+.icoGroup{
+    font-size: 20px;
+}
+.cabecera_interna{
+    padding: 10px 0px;
+    padding-top: 0px;
+}
+.bt_mi_perfil{
+    border-top: 1px solid rgba(232, 232, 247, 0.1);
+    padding: 10px 25px;
+    cursor: pointer;
+}   
+.bt_mi_perfil:hover{
+    background-color: #D4D4D4;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+#sidebar {
+    width: 230px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 3;
+    color: #ffffff;
+    transition: all 0.3s;
+    background-color: #00295e;
+    box-shadow: 1px 1px 65px rgb(0 0 0 / 5%);
+}
+#sidebar.active {
+    margin-left: -230px;
+    /*width: 70px;*/
+}
+
+#sidebar.active ul li a .text_lateral {
+    display: none;
+}
+#sidebar ul li a {
+    padding: 10px;
+    padding-left: 13px;
+    display: block;
+}
+#sidebar ul li a:hover {
+    color: #5c349e;
+}
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #ffffff !important;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    /*padding-left: 30px !important;*/
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+    width: calc(100% - 230px);
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /*padding: 0px 10px;*/
+}
+
+#content.active {
+    /*width: calc(100% - 70px);*/
+    width: 100%;
+}
+
+.active_menu_header{
+    width: 100% !important;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    .e_web{
+        display: none;
+    }
+    .e_movil{
+        display: block;
+    }
+    /*
+    #sidebar {
+        margin-left: -230px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 70px);
+    }
+    */
+    #sidebarCollapse span {
+        display: none;
+    }
+    h2 {
+        font-size: 18px;
+    }
+}
